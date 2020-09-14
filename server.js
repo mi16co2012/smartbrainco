@@ -13,7 +13,7 @@ const { setUseProxies } = require("immer");
 const db = knex({
     client: 'pg',
     connection: {
-      host: '127.0.0.1',
+      host: 'postgresql-tapered-52963',
       user: 'postgres',
       password: 'Theowner06162012',
       database: 'smart-brain'

@@ -20,15 +20,15 @@ const handleRegister = (req, res,db, bcrypt)=>{
             email:loginemail[0],
             name:name,
             joined: new Date()
-        })
+            })
 
-    .   then(users => {
-        res.json(users[0]);
-        })
-
-        .then(trx.commit)
-        .catch(trx.rollback)
-        })
+            .then(users => {
+            res.json(users[0]);
+            })
+            
+            .then(trx.commit)
+            .catch(trx.rollback)
+         })
         .catch(err =>res.status(400).json('Unable to Register'))
     })
 }
